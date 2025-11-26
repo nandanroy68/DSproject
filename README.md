@@ -22,14 +22,13 @@ The dataset used in this project involves an extremely non-linear phenomenon. It
 ## 📓 Notebook Workflow (`servomechanism.ipynb`)
 1.  **Data Loading:** Reading the raw dataset into a Pandas DataFrame.
 2.  **Preprocessing:**
-    * Handling missing values (if any).
-    * **Ordinal/One-Hot Encoding:** Converting categorical columns (`Motor`, `Screw`) into numeric values.
+    * **One-Hot Encoding:** Converting categorical columns (`Motor`, `Screw`) into numeric values.
 3.  **Exploratory Data Analysis (EDA):**
     * Analyzing the distribution of P-gain and V-gain.
     * Visualizing the correlation between different features and the target class.
 4.  **Model Building:**
     * Splitting the data into Training and Testing sets.
-    * Training models (Used Linear Regression but for better peformance we can also use a Decision Tree Regressor or Random Forest Classifier etc.).
+    * Training models (Used Linear Regression but for better peformance we can also use Polynomial Regression or Random Forest Classifier etc.).
 5.  **Model Evaluation:**
     * Predicting results on test data.
     * Calculating error metrics (MAE, MSE, Accuracy Score).
@@ -55,7 +54,12 @@ The dataset used in this project involves an extremely non-linear phenomenon. It
 
 ## 📈 Results
 * The notebook demonstrates how categorical mechanical features influence the continuous performance metric of the servo.
-* (Optional: Add specific accuracy or error rate achieved by your best model here, e.g., "The Random Forest model achieved an accuracy of X%").
+* mean_absolute_error(y_test,model.predict(x_test)) = 7.190539677251235
+* mean_squared_error(y_test,model.predict(x_test)) = 66.03589175595563
+* r2_score(y_test,model.predict(x_test)) = 0.6807245170563927
+* mean_absolute_percentage_error(y_test,model.predict(x_test)) = 0.8268204638174629 
+     
+
 
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/nandanroy68/DSproject/issues).
